@@ -9,13 +9,14 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "server": "node server/app.js"
+    "test": "supervisor server/app.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mongodb": "^3.1.1",
     "pug": "^2.0.3",
+    "supervisor": "^0.12.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
