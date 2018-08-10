@@ -21,6 +21,9 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/preset-env": "^7.0.0-rc.1",
+    "@babel/register": "^7.0.0-rc.1",
     "autoprefixer": "^7.1.2",
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
