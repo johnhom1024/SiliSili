@@ -12,6 +12,8 @@ npm install
 npm run dev
 
 # server
+npm test
+
 
 ```
 
