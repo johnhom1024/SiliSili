@@ -49,8 +49,8 @@ export default {
 
       //发送注册请求
       this.axios.post('/api/register',{
-        uname:this.uname,
-        pwd:this.pwd
+        user_name:this.uname,
+        password:this.pwd
       })
       .then(res => {
         if (res.data == true) {
