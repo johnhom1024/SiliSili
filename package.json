@@ -14,6 +14,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "mdui": "^0.4.1",
     "mongodb": "^3.1.1",
     "pug": "^2.0.3",
     "supervisor": "^0.12.0",
@@ -21,9 +22,6 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-rc.1",
-    "@babel/preset-env": "^7.0.0-rc.1",
-    "@babel/register": "^7.0.0-rc.1",
     "autoprefixer": "^7.1.2",
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
