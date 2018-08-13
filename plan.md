@@ -23,8 +23,9 @@ css框架：sass
 * 首页
 * MV主页
 * MV详情页
-* 漫评主页
-* 漫评详情页
+* ~~漫评主页~~
+* ~~漫评详情页~~
+* 文章板块（新增）
 * cosplay
 * 关于我们
 * 动漫详情页（已设计）
@@ -35,12 +36,21 @@ css框架：sass
 * 用户发布MV
 * 用户发布漫评
 
+## 页面功能介绍
+
+### MV
+
+1. 可以按照动漫的OP和ED分类
+
+
+
 ## 后台数据库设计
 
 用户表：
 
 | 列名 | 值类型 |
 | --- | --- |
+| user_id | Number |
 | user_name | String |
 | password | String |
 | status | Number |
