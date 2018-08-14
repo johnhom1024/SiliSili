@@ -1,6 +1,5 @@
 <template lang="pug">
 div#register
-  header-top
   div.mdui-container.mdui-m-t-5
     div.mdui-row
       div.mdui-col-sm-6.mdui-col-offset-sm-3.mdui-shadow-5.mdui-p-a-5
@@ -27,11 +26,9 @@ div#register
 </template>
 
 <script>
-import headerTop from '../components/header/header';
 
 export default {
   components:{
-    headerTop
   },
   data(){
     return{
