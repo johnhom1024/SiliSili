@@ -9,13 +9,10 @@ div.header
       button.mdui-btn.mdui-btn-icon(mdui-menu="{target: '#menu'}")
        i.mdui-icon.material-icons menu
       ul.mdui-menu#menu
-       i.mdui-menu-item
-        router-link.mudi-btn(to="/home") 个人中心
-        router-link.mudi-btn(to="/setting") 设置
-    div.mdui-tab.mdui-tab-centered(mdui-tab)
-        router-link.mdui-btn(to="/") 首页
-        router-link.mdui-btn(to="/") MV
-        router-link.mdui-btn(to="/") 漫评
+       li.mdui-menu-item
+        router-link(to="/home").mdui-ripple 个人中心
+        router-link(to="/setting").mdui-ripple 设置
+
 
 
 </template>
