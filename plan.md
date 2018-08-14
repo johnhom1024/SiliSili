@@ -27,6 +27,7 @@ css框架：sass
 * ~~漫评主页~~
 * ~~漫评详情页~~
 * 文章板块（新增）
+* 番剧（新增）
 * cosplay
 * 关于我们
 * 动漫详情页（已设计）
@@ -45,14 +46,20 @@ css框架：sass
 
 
 
+
+## 待完善的功能
+
+* 注册页面的注册按钮需要过滤账号的信息
+
+
 ## 后台数据库设计
 
 用户表：
 
 | 列名 | 值类型 |
 | --- | --- |
-| user_id | Number |
 | user_name | String |
 | password | String |
 | status | Number |
-| create_at | String |
+| createAt | String |
+| updateAt | String |
