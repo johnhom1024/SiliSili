@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import headerTop from './components/header/header';
+
 export default {
   name: 'App',
   components:{
