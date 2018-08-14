@@ -6,6 +6,9 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+import 'mdui/dist/css/mdui.min.css'
+import 'mdui/dist/js/mdui.min'
+
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 

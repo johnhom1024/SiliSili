@@ -19,7 +19,7 @@ div#register
           input.mdui-textfield-input(type="password"  required v-model="re_pwd" v-bind:pattern="'^' + pwd + '$'")
           div.mdui-textfield-error 密码不一致
           div.mdui-textfield-helper 重复输入密码
-        button.mdui-btn.mdui-btn-block.mdui-color-theme-accent.mdui-m-t-5(@click="submit") 注册
+        button.mdui-btn.mdui-btn-block.mdui-color-theme-accent.mdui-m-t-5(@click="submit" v-bind:disabled="isButtonDisabled") 注册
         div.mdui-m-t-1(style="text-align:right;")
           router-link(to="/login").mdui-text-color-blue 登陆现有账号
 
@@ -35,12 +35,14 @@ export default {
       uname:'',
       pwd:'',
       re_pwd:'',
-
+      isButtonDisabled: false
     }
   },
   methods:{
     submit(){
       //过滤注册信息合不合格
+      // uname 过滤
+      //密码过滤
 
 
 
@@ -50,15 +52,39 @@ export default {
         password:this.pwd
       })
       .then(res => {
-        if (res.data == true) {
-          alert("注册成功！");
-          this.$router.push('/');
+
+        if (res.data.status == 1) {
+          alert(res.data.message);
+          // this.$router.push('/');
+        }
+
+        if (res.data.status == 0) {
+          alert(res.data.message);
         }
       })
       .catch(error => {
-        alert("注册失败");
+        alert("注册失败：后端API无响应");
       })
     }
+  },
+  watch: {
+    //可以在此处写过滤的代码
+    //过滤用户名
+    //过滤密码
+
+
+    //检查重复的密码是否相同
+    re_pwd(newVal){
+      
+      if (newVal != this.pwd) {
+        this.isButtonDisabled = true;
+      }
+      else{
+        this.isButtonDisabled = false;
+      }
+    }
+
+    
   }
 }
 </script>
