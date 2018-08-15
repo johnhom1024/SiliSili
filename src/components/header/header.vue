@@ -2,7 +2,7 @@
 div.header
   div.mdui-appbar.mdui-appbar-scroll-toolbar-hide
     div.mdui-toolbar.mdui-color-theme
-      router-link.mdui-btn(to="/") Anime
+      router-link.mdui-btn(to="/") SiliSili
       div.mdui-toolbar-spacer
       router-link.mdui-btn(to="/register") 注册
       router-link.mdui-btn(to="/login") 登陆
