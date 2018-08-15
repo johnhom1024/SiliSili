@@ -12,9 +12,9 @@ import 'mdui/dist/js/mdui.min'
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
-axios.defaults.timeout = 5000;
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
-axios.defaults.withCredentials=true;
+axios.defaults.timeout = 5000
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
+axios.defaults.withCredentials = true
 // axios.defaults.baseURL = '127.0.0.1:3000/api'
 
 // //返回状态判断

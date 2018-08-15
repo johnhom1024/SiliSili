@@ -28,68 +28,60 @@ div#register
 <script>
 
 export default {
-  components:{
+  components: {
   },
-  data(){
-    return{
-      uname:'',
-      pwd:'',
-      re_pwd:'',
+  data () {
+    return {
+      uname: '',
+      pwd: '',
+      re_pwd: '',
       isButtonDisabled: false
     }
   },
-  methods:{
-    submit(){
-      //过滤注册信息合不合格
+  methods: {
+    submit () {
+      // 过滤注册信息合不合格
       // uname 过滤
-      //密码过滤
+      // 密码过滤
 
-
-
-      //发送注册请求
-      this.axios.post('/api/register',{
-        user_name:this.uname,
-        password:this.pwd
+      // 发送注册请求
+      this.axios.post('/api/register', {
+        user_name: this.uname,
+        password: this.pwd
       })
-      .then(res => {
-
-        if (res.data.status == 1) {
-          alert(res.data.message);
+        .then(res => {
+          if (res.data.status === 1) {
+            alert(res.data.message)
           // this.$router.push('/');
-        }
+          }
 
-        if (res.data.status == 0) {
-          alert(res.data.message);
-        }
-      })
-      .catch(error => {
-        alert("注册失败：后端API无响应");
-      })
+          if (res.data.status === 0) {
+            alert(res.data.message)
+          }
+        })
+        .catch(Error => {
+          alert('注册失败：后端API无响应')
+        })
     }
   },
   watch: {
-    //可以在此处写过滤的代码
-    //过滤用户名
-    //过滤密码
+    // 可以在此处写过滤的代码
+    // 过滤用户名
+    // 过滤密码
 
-
-    //检查重复的密码是否相同
-    re_pwd(newVal){
-      
-      if (newVal != this.pwd) {
-        this.isButtonDisabled = true;
-      }
-      else{
-        this.isButtonDisabled = false;
+    // 检查重复的密码是否相同
+    re_pwd (newVal) {
+      if (newVal !== this.pwd) {
+        this.isButtonDisabled = true
+      } else {
+        this.isButtonDisabled = false
       }
     }
 
-    
   }
 }
 </script>
 
 <style scoped>
-
 
 </style>
