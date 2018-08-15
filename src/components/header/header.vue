@@ -3,7 +3,7 @@ div.header
   div.mdui-appbar.mdui-appbar-scroll-toolbar-hide
     div.mdui-toolbar.mdui-color-theme
       router-link.mdui-btn(to="/") Anime
-      div.mdui-toolbar-spacer 
+      div.mdui-toolbar-spacer
       router-link.mdui-btn(to="/register") 注册
       router-link.mdui-btn(to="/login") 登陆
       button.mdui-btn.mdui-btn-icon(mdui-menu="{target: '#menu'}")
@@ -13,13 +13,11 @@ div.header
         router-link(to="/home").mdui-ripple 个人中心
         router-link(to="/setting").mdui-ripple 设置
 
-
-
 </template>
 
 <script>
 export default {
-  
+
 }
 </script>
 
